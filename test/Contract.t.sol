@@ -2,7 +2,7 @@
 pragma solidity ^0.8.13;
 
 import "forge-std/Test.sol";
-import "solmate-utils/SSTORE2.sol";
+import "solmate/utils/SSTORE2.sol";
 
 
 contract ContractTest is Test {

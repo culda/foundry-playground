@@ -2,11 +2,15 @@
 pragma solidity ^0.8.13;
 
 import "forge-std/Script.sol";
+import "../src/Contract.sol";
 
 contract ContractScript is Script {
-    function setUp() public {}
+    function run() external {
+        vm.startBroadcast();
 
-    function run() public {
-        vm.broadcast();
+        Contract c = new Contract(10**18);
+        uint256 x = c.getX();
+
+        vm.stopBroadcast();
     }
 }
